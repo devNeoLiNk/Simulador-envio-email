@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Envío de Email</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet"> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header id="header" class="header">
+        <h1 class="no-margin">Simulador de Envío de Email</h1>
+      </header>
+
+      <form id="send-email" class="formulario">
+        <div class="campo">
+          <label for="email">Para</label>
+          <input id="email" class="input-text email" type="email" />
+        </div>
+
+        <div class="campo">
+          <label for="asunto">Asunto</label>
+          <input id="asunto" class="input-text" type="text" />
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" class="input-text"></textarea>
+        </div>
+
+        <div id="spinner"></div>
+
+        <div class="botones">
+          <button id="enviar" class="btn-enviar" type="submit">
+            Enviar<span class="material-icons">send</span>
+          </button>
+
+          <button id="reset" class="btn-limpiar" type="reset">
+            Limpiar<span class="material-icons">cleaning_services</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

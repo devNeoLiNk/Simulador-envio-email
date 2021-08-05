@@ -1,0 +1,163 @@
+/****** Custom Properties ******/
+:root {
+  /* --principalFont: "Roboto", sans-serif; */
+  --principalFont: "Raleway", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--principalFont);
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #b8860b;
+  background: -webkit-linear-gradient(to right, #185a9d, #b8860b);
+  background: linear-gradient(to right, #185a9d, #b8860b);
+}
+
+.container {
+  max-width: 120rem;
+  width: 95%;
+  margin: 0 auto;
+  background-color: whitesmoke;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.header {
+  margin-top: 2rem;
+  padding: 5px;
+  text-align: center;
+  background-color: #202124;
+  color: white;
+  font-size: 1rem;
+}
+
+.header h1 {
+  font-weight: 900;
+}
+
+.formulario {
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .formulario {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  display: block;
+}
+
+.input-text {
+  width: 100%;
+  border: none;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.campo textarea {
+  height: 5rem;
+  resize: vertical;
+  margin-bottom: 0.5rem;
+}
+
+.border-red {
+  border: 1px solid red;
+}
+.border-green {
+  border: 1px solid green;
+}
+
+.errorMsg-style {
+  color: red;
+  border: 1px solid red;
+  padding: 8px;
+  text-align: center;
+}
+
+/***** Spinner *****/
+#spinner {
+  display: none;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border-left-color: #188038;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.msgSendEmail-style {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: rgb(73, 194, 73);
+  color: white;
+  font-weight: normal;
+}
+
+/***** Botones *****/
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.7rem;
+  font-weight: 700;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 0.3rem;
+}
+button:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .botones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+button span {
+  margin-left: 0.5rem;
+}
+
+.btn-enviar {
+  background-color: #1a73e8;
+}
+#enviar:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.btn-limpiar {
+  background-color: #d93025;
+}
